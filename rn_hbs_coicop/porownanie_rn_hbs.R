@@ -1,6 +1,6 @@
 # MN: 05/02/23
 # Porównaj konsumpcję COICOP z HBS i RN
-# Wymagania: patrz blioteki
+# Wymagania: patrz biblioteki
 
 library(data.table)
 library(magrittr)
