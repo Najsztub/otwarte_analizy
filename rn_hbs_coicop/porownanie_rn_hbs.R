@@ -93,8 +93,12 @@ kons_razem_filtr[
     kier = ifelse(blad_rel_cp01 > 0, "green", "red")
   )
 ] %>% ggplot(aes(x = coicop, y = prop, fill = kier)) +
-  geom_bar(stat = "identity") + theme(legend.position = "none") +
-  geom_hline(yintercept = 0)
+  geom_bar(stat = "identity") + 
+  theme_bw() + theme(legend.position = "none") +
+  geom_hline(yintercept = 0) +
+  scale_y_continuous(labels=scales::percent) +
+  labs(x = "COICOP", y = "Proporcja HBS/RN, %"
+)
 
 
 ############################ Twórz indeks dla krajów
