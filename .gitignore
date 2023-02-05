@@ -1,0 +1,4 @@
+*.rds
+*.gz
+dane/es_cache/*
+dane/jst/*/
