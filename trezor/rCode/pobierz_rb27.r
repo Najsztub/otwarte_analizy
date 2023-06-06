@@ -54,7 +54,7 @@ con <- dbConnect(
 )
 
 # Ładuj poszczególne lata w pętli
-dane_rb27 <- lapply(2015:2022, function(x) {
+dane_rb27 <- lapply(2023, function(x) {
     message("Rok: ", x)
     start <- 1 
     # if (x == 2015) start <- 1658 + 1
@@ -62,6 +62,7 @@ dane_rb27 <- lapply(2015:2022, function(x) {
         trezor_api$rb27,
         param = list(
             rok = x,
+            miesiac = 3,
             limit = 500,
             page = start,
             format = "json"

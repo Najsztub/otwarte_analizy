@@ -12,7 +12,8 @@ trezor_api <- list(
     slownik_jednostki_budzetowe = "https://trezor-api.mf.gov.pl/api/v1/slownik/jednostki-budzetowe",
     slownik_zrodla_finansowania = "https://trezor-api.mf.gov.pl/api/v1/slownik/zrodla-finansowania",
     rb28 = "https://trezor-api.mf.gov.pl/api/v1/sprawozdania-RB28",
-    rb27 = "https://trezor-api.mf.gov.pl/api/v1/sprawozdania-RB27"
+    rb27 = "https://trezor-api.mf.gov.pl/api/v1/sprawozdania-RB27",
+    rb50 = "https://trezor-api.mf.gov.pl/api/v1/sprawozdania-RB50"
 )
 
 # Funkcja do zaczytywania całych zbiorów z TERZOR-a

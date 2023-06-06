@@ -2,3 +2,6 @@
 *.gz
 dane/es_cache/*
 dane/jst/*/
+jst/set_env.sh
+dane/shp/*
+**/.ipynb_checkpoints/*
