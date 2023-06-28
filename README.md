@@ -1,5 +1,9 @@
 # otwarte_analizy
-Miejsce do dzielenia się kodem
+Miejsce do dzielenia się kodem, który tworzę poza pracą. Często z ciekawości, w wolnym czasie. Szkoda, by to wszystko kończyło w przysłowiowej szufladzie.
+
+## trezor
+
+Kod oraz analizy na publicznie dostępnym [API MF do systemu TREZOR](https://trezor-api.mf.gov.pl/dev/index.html). Folder zawiera kod do ładowania pełnej bazy oraz przykładowe analizy.
 
 ## rn_hbs_coicop
 
