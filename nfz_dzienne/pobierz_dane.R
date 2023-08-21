@@ -10,7 +10,19 @@ library(lubridate)
 library(ggplot2)
 
 # ID wersji
-WERSJA <- "290423"
+WERSJA <- "210823"
+
+######################################################################
+# Ustawienia wyświetlania dla ggplot
+theme_set(theme_bw())  
+theme_update(legend.position="bottom", text = element_text(size = 20))
+# Kolory: https://www.datanovia.com/en/blog/ggplot-colors-best-tricks-you-will-love/
+# The palette with grey:
+cbp1 <- c("#999999", "#E69F00", "#56B4E9", "#009E73",
+          "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+color_fill <- scale_fill_manual(values = cbp1)
+# To use for line and point colors, add
+color_color <- scale_colour_manual(values=cbp1)
 
 # Strona ze sładkami NFZ
 zus_nfz_glowna <- "https://www.zus.pl/o-zus/o-nas/finanse/przekazywanie-skladek-do-nfz"
@@ -112,3 +124,15 @@ dane_nfz_filtr[
     ), 
     .(data = year(data_przekazania))
 ][order(data)]
+
+# Cumsum po latach
+dane_nfz_filtr[year(data_przekazania) >= 2015][order(data_przekazania)][
+    , 
+    .(
+        data = lubridate::yday(data_przekazania),
+        nfz_mld = cumsum(przekazane) / 1e9
+    ), 
+    .(rok = year(data_przekazania))
+] %>% 
+    ggplot(aes(x = data, y = nfz_mld, colour=factor(rok))) + geom_line() +
+    labs(x="Data", y="NFZ mld zł/m-c")
