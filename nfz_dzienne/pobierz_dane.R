@@ -135,4 +135,4 @@ dane_nfz_filtr[year(data_przekazania) >= 2015][order(data_przekazania)][
     .(rok = year(data_przekazania))
 ] %>% 
     ggplot(aes(x = data, y = nfz_mld, colour=factor(rok))) + geom_line() +
-    labs(x="Data", y="NFZ mld zł/m-c")
+    labs(x="Data", y="NFZ mld zł/m-c"colour="")
