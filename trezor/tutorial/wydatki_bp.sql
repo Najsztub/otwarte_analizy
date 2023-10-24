@@ -19,11 +19,11 @@ group by rok
 ),
 plan as (
 SELECT
-rok,
-sum(case when wersja = 'Projekt ustawy budżetowej – Rada dialogu społecznego' then kwota else 0 end) / 1e6 wyd_rds,
-sum(case when wersja = 'Rządowy projekt ustawy budżetowej' then kwota else 0 end) / 1e6 wyd_projekt,
-sum(case when wersja = 'Ustawa budżetowa' then kwota else 0 end) / 1e6 wyd_ustawa,
-sum(case when wersja = 'Nowelizacja Ustawy budżetowej' then kwota else 0 end) / 1e6 wyd_nowela
+	rok,
+	sum(case when wersja = 'Projekt ustawy budżetowej – Rada dialogu społecznego' then kwota else 0 end) / 1e6 wyd_rds,
+	sum(case when wersja = 'Rządowy projekt ustawy budżetowej' then kwota else 0 end) / 1e6 wyd_projekt,
+	sum(case when wersja = 'Ustawa budżetowa' then kwota else 0 end) / 1e6 wyd_ustawa,
+	sum(case when wersja = 'Nowelizacja Ustawy budżetowej' then kwota else 0 end) / 1e6 wyd_nowela
 FROM trezor.ub_wydatki
 GROUP BY rok
 )
