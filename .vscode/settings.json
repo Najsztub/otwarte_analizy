@@ -1,0 +1,13 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "hp-stat.dom.lan",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "HP-TREZOR",
+            "database": "stat",
+            "username": "stat"
+        }
+    ]
+}
